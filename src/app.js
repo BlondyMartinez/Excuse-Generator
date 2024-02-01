@@ -11,24 +11,7 @@ let when = [
 ];
 
 function generateExcuse() {
-  let excuse = "";
-
-  for (let i = 0; i < 4; i++) {
-    switch (i) {
-      case 0:
-        excuse = who[Math.floor(Math.random() * 4)];
-        break;
-      case 1:
-        excuse += action[Math.floor(Math.random() * 4)];
-        break;
-      case 2:
-        excuse += what[Math.floor(Math.random() * 3)];
-        break;
-      case 3:
-        excuse += when[Math.floor(Math.random() * 5)];
-        break;
-    }
-  }
+  let excuse = who[Math.floor(Math.random() * who.length)] + action[Math.floor(Math.random() * action.length)] + what[Math.floor(Math.random() * what.length)] + when[Math.floor(Math.random() * when.length)];
 
   document.getElementById("excuse").innerHTML = excuse;
 }
